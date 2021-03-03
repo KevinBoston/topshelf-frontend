@@ -10,7 +10,7 @@ const HomePage = () => {
             <h2>Welcome to </h2>
             <h1>TopShelf!</h1>
             <LoginContainer />
-            {/* <AddItemButton /> */}
+            <AddItemButton />
             <RandomItem/>
         </div>
     )

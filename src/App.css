@@ -1,4 +1,6 @@
 .App {
+  /* background: url(https://wallpapermemory.com/uploads/362/wine-wallpaper-hd-1920x1080-71104.jpg) 
+  no-repeat center center fixed; */
   text-align: center;
 }
 
@@ -136,7 +138,7 @@
   margin: 1.5%;
   text-align: center;
   width: 30%;
-  height: 300px;
+  height: 30px;
   background: whitesmoke;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -156,9 +158,16 @@ font-weight: 900;
 font-size: xx-large;
 padding-bottom: 10px;
 }
+.ItemForm Button {
+  color: #ffffff;
+  background-color: rgb(0, 204, 255);
+}
 .ItemContainer {
-  background: url(https://themepack.me/i/c/749x467/media/g/1203/beer-theme-kb7.jpg)
-  no-repeat center center fixed;
+  color: rgb(182, 122, 45);
+  background-size:auto;
+}
+.card-body {
+  color:rgb(37, 37, 37);
   background-size:auto;
 }
 

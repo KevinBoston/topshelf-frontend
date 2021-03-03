@@ -16,6 +16,10 @@ const ItemView = props => {
           <CardImg className='ItemImage' src={theItem && theItem.image_url} alt={theItem && theItem.name} /><br></br><br></br>
           <ul>
             <li>Category: {theItem.category}</li>
+            <li>Subategory: {theItem.subcategory}</li>
+            <li>Alcohol Content: {theItem.abv}%</li>
+            <li>Style: {theItem.style}</li>
+            <li>Country: {theItem.country}</li>
           </ul>
         </CardBody>
       </Card>
