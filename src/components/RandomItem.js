@@ -14,7 +14,7 @@ class RandomItem extends React.Component {
             
             if (randomItem) {
                 //console.log(randomID)
-                console.log(randomItem)
+                //console.log(randomItem)
                 
                 return randomItem
             } else {
@@ -31,12 +31,13 @@ class RandomItem extends React.Component {
             return(
                 <Link to={`/items/${item.attributes.id}`}>
                  <Card>
-                     <CardTitle>
-                        Check out {item.attributes.name}!
-                     </CardTitle>
-                     <CardBody>
-                        <CardImg width="10%" height="10%" src={item.image_url} />
-                     </CardBody>
+                 <CardBody>
+                        <CardImg align="left" width="30%" height="30%" src={item.attributes.image_url} />
+                 </CardBody>
+                 <CardTitle>
+                       Check out {item.attributes.name}!
+                 </CardTitle>
+                     
                  </Card>
                  </Link>
             )

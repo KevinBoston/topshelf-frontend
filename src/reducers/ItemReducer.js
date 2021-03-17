@@ -3,8 +3,13 @@ function ItemReducer(state = { items: [], user: {username: undefined}}, action) 
     switch (action.type) {
 
         case 'ADD_ITEM':
+            if (action.payload.error === "Internal Server Error") {
+                return state
+            } else {
+                return {...state, items:[...state.items, action.payload.data]}
+            }
 
-            return {...state, items:[...state.items, action.payload.data]}
+            
 
         case 'GET_ITEMS':
             

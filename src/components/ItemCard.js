@@ -6,6 +6,7 @@ import { Card, CardBody, CardTitle, CardImg, Button } from 'reactstrap';
 const ItemCard = props => {
     //console.log(props.item)
     //debugger
+    if (props.item) {
     return(
         <Link key={props.id} to={`/items/${props.item.id}`}>
         <Card className = 'ItemCard'>
@@ -17,6 +18,9 @@ const ItemCard = props => {
         </Card>
         </Link>
         )
+    } else {
+        return <> </>
+    }
 }
 
 export default ItemCard

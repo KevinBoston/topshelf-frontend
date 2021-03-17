@@ -24,9 +24,9 @@ class ItemForm extends React.Component {
     }
     handleSubmit = e => {
         e.preventDefault();
-        console.log(this.props)
-        debugger
-        console.log(this.state)
+        //console.log(this.props)
+        //debugger
+        //console.log(this.state)
         this.props.addItem(this.state)
         this.props.history.push('/items')
         this.setState({
@@ -65,7 +65,7 @@ class ItemForm extends React.Component {
                     <input type="text" name="style" onChange={this.handleChange} placeholder="IPA, Stout, Burgundy, Single Malt..." value={this.state.style} /><br />
                     <label>Country of Origin: </label>
                     <input type="text" name="country" onChange={this.handleChange} placeholder="USA, Scotland, France..." value={this.state.country} /><br />
-                    <input type="submit" />
+                    <input type="submit" disabled={this.state.name===""}/>
                 </form>
             </div>
         )
