@@ -17,6 +17,7 @@ class ItemForm extends React.Component {
         style:"",
         country:""
     }
+
     handleChange = e => {
         this.setState({
             [e.target.name]: e.target.value

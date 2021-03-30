@@ -65,3 +65,7 @@ export const deleteItem = itemId => {
       .then(dispatch({type: 'DELETE_ITEM', payload: itemId}))
     };
   };
+
+  export const searchForItem = term => {
+      return term
+  }

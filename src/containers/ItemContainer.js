@@ -3,6 +3,7 @@ import ItemForm from '../components/ItemForm'
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import AddItemButton from '../components/AddItemButton'
+import SearchBar from '../components/SearchBar'
 import {fetchItems} from '../actions/UserActions'
 import { connect } from 'react-redux'
 import ItemView from '../components/ItemView'
@@ -29,6 +30,7 @@ class ItemContainer extends React.Component {
             <Switch>
                  <Route exact path="/items">
                     <AddItemButton />
+                    <SearchBar />
                     <Items items={this.props.items}/>
                 </Route>
                 <Route path="/items/new">

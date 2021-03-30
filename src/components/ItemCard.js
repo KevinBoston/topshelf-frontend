@@ -1,6 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { Card, CardBody, CardTitle, CardImg, Button } from 'reactstrap';
+// import Incrementor from './Incrementor'
 
 
 const ItemCard = props => {
@@ -8,6 +9,7 @@ const ItemCard = props => {
     //debugger
     if (props.item) {
     return(
+        <>
         <Link key={props.id} to={`/items/${props.item.id}`}>
         <Card className = 'ItemCard'>
             <CardBody>
@@ -17,6 +19,8 @@ const ItemCard = props => {
             </CardBody>
         </Card>
         </Link>
+        {/* <Incrementor /> */}
+        </>
         )
     } else {
         return <> </>

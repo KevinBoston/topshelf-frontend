@@ -9,13 +9,8 @@ class RandomItem extends React.Component {
         
         if (this.props.items) {
             const randomItem = this.props.items[Math.floor(Math.random() * this.props.items.length)];
-            // const randomID = Math.floor(Math.random() * this.props.items.length) + 1
-            // const randomItem = this.props.items.find(item => parseInt(item.id) === randomID)
             
             if (randomItem) {
-                //console.log(randomID)
-                //console.log(randomItem)
-                
                 return randomItem
             } else {
                 this.randomID()
