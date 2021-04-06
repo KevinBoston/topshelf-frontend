@@ -1,5 +1,5 @@
 function ItemReducer(state = { items: [], user: {username: undefined}}, action) {
-    console.log(action)
+    //console.log(action)
     switch (action.type) {
 
         case 'ADD_ITEM':
@@ -9,7 +9,10 @@ function ItemReducer(state = { items: [], user: {username: undefined}}, action) 
                 return {...state, items:[...state.items, action.payload.data]}
             }
 
-            
+        case 'SEARCH_FOR_ITEMS':
+            //console.log(action)
+            console.log(action.payload)
+            return state
 
         case 'GET_ITEMS':
             

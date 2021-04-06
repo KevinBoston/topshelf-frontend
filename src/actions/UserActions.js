@@ -67,5 +67,11 @@ export const deleteItem = itemId => {
   };
 
   export const searchForItem = term => {
-      return term
+      //console.log(term)
+      return (dispatch) => {
+          dispatch({
+          type: 'SEARCH_FOR_ITEMS',
+          payload: term
+      })
+    }
   }
