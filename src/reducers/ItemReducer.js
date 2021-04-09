@@ -12,7 +12,7 @@ function ItemReducer(state = { items: [], user: {username: undefined}}, action) 
         case 'SEARCH_FOR_ITEMS':
             //console.log(action)
             console.log(action.payload)
-            return state
+            return {...state, results:[...state.results, action.payload.data.results]}
 
         case 'GET_ITEMS':
             

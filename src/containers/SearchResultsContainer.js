@@ -7,6 +7,7 @@ import SearchBar from '../components/SearchBar'
 import {fetchItems} from '../actions/UserActions'
 import { connect } from 'react-redux'
 import ItemView from '../components/ItemView'
+import ResultsContainer from './ResultsContainer'
 class SearchResultsContainer extends React.Component {
 
     // componentDidMount() {
@@ -29,6 +30,7 @@ class SearchResultsContainer extends React.Component {
             <div className="ItemContainer">
             <Switch>
                  <Route exact path="/results">
+                     <ResultsContainer results={this.props.results} />
 
                 </Route>
                 {/* <Route path="/items/new">
@@ -43,7 +45,7 @@ class SearchResultsContainer extends React.Component {
 }
 
 const mapStateToProps = state => {
-    return {items: state.items}
+    return {items: state.results}
 }
 
 export default connect(mapStateToProps, {fetchItems})(SearchResultsContainer)
