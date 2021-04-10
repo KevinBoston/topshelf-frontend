@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import {searchForItem} from '../actions/UserActions'
+import {withRouter} from 'react-router-dom'
 
 class SearchBar extends React.Component {
 
@@ -22,6 +23,7 @@ class SearchBar extends React.Component {
         e.preventDefault()
         debugger
         this.props.searchForItem(this.state.searchTerm)
+        this.props.history.push('/results')
         this.setState({
             searchTerm: ""
         })
@@ -41,4 +43,4 @@ class SearchBar extends React.Component {
     }
 
 }
-export default connect(null, {searchForItem})(SearchBar)
+export default withRouter(connect(null, {searchForItem})(SearchBar))

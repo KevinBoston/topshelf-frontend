@@ -1,4 +1,4 @@
-function ItemReducer(state = { items: [], user: {username: undefined}}, action) {
+function ItemReducer(state = { items: [], user: {username: undefined}, results:[]}, action) {
     //console.log(action)
     switch (action.type) {
 
@@ -11,8 +11,10 @@ function ItemReducer(state = { items: [], user: {username: undefined}}, action) 
 
         case 'SEARCH_FOR_ITEMS':
             //console.log(action)
-            console.log(action.payload)
-            return {...state, results:[...state.results, action.payload.data.results]}
+            console.log(action)
+            console.log(state)
+            return state
+            //return {...state, results:[...state.results, action.payload]}
 
         case 'GET_ITEMS':
             
