@@ -6,6 +6,7 @@ import {Route} from 'react-router-dom'
 import React from 'react'
 import {fetchItems} from './actions/UserActions'
 import {connect} from 'react-redux'
+import SearchResultsContainer from './containers/SearchResultsContainer';
 
 class App extends React.Component {
     componentDidMount() {
@@ -19,6 +20,7 @@ class App extends React.Component {
         <NavBar />
         <Route exact path='/' component={HomePage} /> 
         <ItemContainer />
+        <Route exact path='/results' component={SearchResultsContainer} />
         {/* items={this.props.items}/> */}
       </div>
     );

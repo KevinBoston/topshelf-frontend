@@ -21,7 +21,7 @@ class SearchBar extends React.Component {
     }
     handleSubmit = e => {
         e.preventDefault()
-        debugger
+        //debugger
         this.props.searchForItem(this.state.searchTerm)
         this.props.history.push('/results')
         this.setState({
