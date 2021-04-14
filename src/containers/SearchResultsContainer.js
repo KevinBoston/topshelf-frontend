@@ -4,7 +4,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import AddItemButton from '../components/AddItemButton'
 import SearchBar from '../components/SearchBar'
-import {fetchItems} from '../actions/UserActions'
+import {searchForItem} from '../actions/UserActions'
 import { connect } from 'react-redux'
 import ItemView from '../components/ItemView'
 import ResultsContainer from './ResultsContainer'
@@ -26,7 +26,7 @@ class SearchResultsContainer extends React.Component {
 
     render() {
         console.log(this.props)
-        //debugger
+        debugger
         return (
             <div className="ItemContainer">
             <Switch>
@@ -46,7 +46,7 @@ class SearchResultsContainer extends React.Component {
 }
 
 const mapStateToProps = state => {
-    return {items: state.results}
+    return {searchTerm: state.searchTerm}
 }
 
-export default connect(mapStateToProps, {fetchItems})(SearchResultsContainer)
+export default connect(mapStateToProps, {searchForItem})(SearchResultsContainer)

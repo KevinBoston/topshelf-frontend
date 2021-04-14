@@ -8,7 +8,7 @@ class ResultsContainer extends React.Component {
         if (!this.props.searchTerm){
             return <div>No results at this time</div>
         } else {
-            return <div>{this.props.searchTerm}</div>
+            return <div>Results for: {this.props.searchTerm}</div>
         }
         
     }
