@@ -25,12 +25,13 @@ class SearchResultsContainer extends React.Component {
     // }
 
     render() {
+        console.log(this.props)
         //debugger
         return (
             <div className="ItemContainer">
             <Switch>
                  <Route exact path="/results">
-                     <ResultsContainer results={this.props.results} />
+                     <ResultsContainer searchTerm={this.props.searchTerm} />
 
                 </Route>
                 {/* <Route path="/items/new">

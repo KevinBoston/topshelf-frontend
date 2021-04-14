@@ -4,11 +4,11 @@ import { connect } from 'react-redux'
 class ResultsContainer extends React.Component {
 
     handleResults() {
-        console.log("loaded", this.props)
-        if (!this.props.results){
+        console.log("loaded", this.props, this.state)
+        if (!this.props.searchTerm){
             return <div>No results at this time</div>
         } else {
-            return <div>{this.props.results}</div>
+            return <div>{this.props.searchTerm}</div>
         }
         
     }
