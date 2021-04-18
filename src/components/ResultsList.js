@@ -1,7 +1,8 @@
 import React from 'react';
 import ResultCard from './ResultCard'
 
-const ResultsList = (props) => {      
+const ResultsList = (props) => {   
+    console.log(this.props)   
     return(
         <>
             {props.results && props.results.map((result =>{

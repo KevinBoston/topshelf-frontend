@@ -25,6 +25,8 @@ class SearchResultsContainer extends React.Component {
     // }
 
     render() {
+        console.log(this.props)
+        debugger
         return (
             <div className="SearchResultsContainer">
             <Switch>
@@ -44,7 +46,7 @@ class SearchResultsContainer extends React.Component {
 }
 
 const mapStateToProps = state => {
-    return {searchTerm: state.searchTerm}
+    return {searchTerm: state.searchTerm, results: state.results}
 }
 
 export default connect(mapStateToProps, {searchForItem})(SearchResultsContainer)

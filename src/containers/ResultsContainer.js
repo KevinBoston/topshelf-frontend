@@ -31,7 +31,7 @@ class ResultsContainer extends React.Component {
     handleResults() {
         debugger
         if (this.props.results) {
-            <ResultsList results={this.props.results} />
+            <ResultsList results={this.props.results} searchTerm={this.props.searchTerm} />
         }
     }
 

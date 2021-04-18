@@ -15,7 +15,7 @@ function ItemReducer(state = { items: [], user: {username: undefined}, searchTer
             console.log(state)
             debugger
             //return state
-            return {...state, searchTerm: action.payload}
+            return {...state, searchTerm: action.payload, results: action.payload}
 
         case 'GET_ITEMS':
             
