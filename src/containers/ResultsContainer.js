@@ -5,29 +5,42 @@ import ResultsList from '../components/ResultsList'
 class ResultsContainer extends React.Component {
 
     handleRender() {
-        this.handleHeading()
-        this.handleResults()
+        debugger
+        return(
+            <>
+                {this.handleHeading()}
+                {this.handleResults()}
+            </>
+        )
     }
     handleHeading() {
         console.log(this.props)
-        debugger
+        //debugger
         if (!this.props.searchTerm){
-            return <div>No results at this time</div>
-        } else {
-            return <div><h2>Results for: {this.props.searchTerm}</h2></div>
+            return ( 
+            <div className="ResultsHeader">
+                No results at this time
+            </div>
+            )} else {
+            return (
+            <div className="ResultsHeader">
+                Results for: {this.props.searchTerm}
+            </div>)
         }
     }
     handleResults() {
+        debugger
         if (this.props.results) {
             <ResultsList results={this.props.results} />
         }
     }
 
     render() {
+        debugger
         return (
-            <>
-            {this.handleRender()}
-            </>
+            <div className="ResultsContainer">
+                {this.handleRender()}
+            </div>
         )
     }
 

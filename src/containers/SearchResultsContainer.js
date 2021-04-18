@@ -25,10 +25,8 @@ class SearchResultsContainer extends React.Component {
     // }
 
     render() {
-        console.log(this.props)
-        debugger
         return (
-            <div className="ItemContainer">
+            <div className="SearchResultsContainer">
             <Switch>
                  <Route exact path="/results">
                      <ResultsContainer searchTerm={this.props.searchTerm} />
